@@ -1,0 +1,54 @@
+# A resistor network is made of Resistors, Voltage Sources, Nodes, and Loops
+# This file includes a modification where a 5Ω resistor is added in parallel with the 32V source.
+
+<Resistor>
+Name = ad
+Resistance = 2
+</Resistor>
+
+<Resistor>
+Name = bc
+Resistance = 2
+</Resistor>
+
+<Resistor>
+Name = cd
+Resistance = 1
+</Resistor>
+
+<Resistor>
+Name = ce
+Resistance = 4
+</Resistor>
+
+<Resistor>
+Name = de
+Resistance = 5
+</Resistor>
+
+<Source>
+Name = de
+Type = Voltage
+Value = 32
+</Source>
+
+<Source>
+Name = ab
+Type = Voltage
+Value = 16
+</Source>
+
+<Loop>
+Name = L1
+Nodes = a,b,c,d
+</Loop>
+
+<Loop>
+Name = L2
+Nodes = c,d,e
+</Loop>
+
+<Loop>
+Name = L3
+Nodes = d,e
+</Loop>
